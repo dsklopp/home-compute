@@ -10,6 +10,7 @@
 package "git"
 package "virtualbox"
 package "vagrant"
+package "google-chrome"
 
 file "/tmp/demo.txt" do
   owner node['home-compute']['mac']['user']
