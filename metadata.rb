@@ -1,0 +1,7 @@
+name             'home-compute'
+maintainer       'Dan Klopp'
+maintainer_email 'dsklopp@gmail.com'
+license          'All rights reserved'
+description      'Installs/Configures home-compute'
+long_description 'Installs/Configures home-compute'
+version          '0.1.0'
