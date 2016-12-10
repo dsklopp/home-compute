@@ -1,5 +1,5 @@
 
 default['home-compute']['mac'] = {
-  'user' => 'dklopp',
+  'user' => 'natsu',
   'group' => 'staff'
 }

@@ -13,6 +13,10 @@ if [ `uname` == "Darwin" ]; then
 fi
 
 function install_chef_mac {
+  which brew &> /dev/null
+  if [ $? -ne 0 ]; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
   which chef-client &> /dev/null
 
   if [ $? -eq 0 ]; then
@@ -26,7 +30,7 @@ function install_chef_mac {
   fi
   echo Installing Chef
   cd /tmp/
-  wget $CHEFDK_URL -O $CHEFDK
+  curl -L ${CHEFDK_URL} > $CHEFDK
   sudo hdiutil attach $CHEFDK
   cd /Volumes/Chef\ Development\ Kit/
   sudo installer -package *.pkg -target /
